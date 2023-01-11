@@ -1,0 +1,65 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+
+{% block title %}
+{{news|length}} Новости
+<a style="color: red" href="{% url 'search' %}">Найти статью</a>
+{% endblock title %}
+
+{% block content %}
+{% if is_not_subscriber %}
+    <p class="text-center"><a href="{% url 'subscribe' category.id %}" class="btn btn-secondary btn-sm">Подписаться</a> </p>
+{% endif %}
+
+{% if perms.news.add_post %}
+<a href="{% url 'articles_post_create' %}">Добавить статью</a>
+{% endif %}
+{% if perms.news.add_post %}
+<a href="{% url 'news_post_create' %}">Добавить новость</a>
+{% endif %}
+
+<table>
+    <tr>
+        <td>Заголовок</td>
+        <td>Дата публикации</td>
+        <td>Кратко</td>
+        {% if perms.news.change_post %}
+        <td>Действия</td>
+        {% endif %}
+    </tr>
+        {% for new in category_news_list %}
+        <tr>
+            <td><a href="/news/{{new.pk}}">{{new.head_news|censor}}</a></td>
+            <td>{{new.time_in|date:"d M y"}}</td>
+            <td>{{new.text_news|censor|truncatechars:20}}</td>
+            <td>
+                {% for category in new.category.all %}
+                    <a href="{% url 'category_list' category.id %}">{{ category }}</a>
+                {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+</table>
+
+    {% if page_obj.has_previous %}
+        <a href="?page=1">1</a>
+        {% if page_obj.previous_page_number != 1 %}
+            ...
+            <a href="?page={{page_obj.previous_page_number}}">{{ page_obj.previous_page_number }}</a>
+        {% endif %}
+    {% endif %}
+
+    {{ page_obj.number }}
+
+    {% if page_obj.has_next %}
+        <a href="?page={{page_obj.next_page_number}}">{{ page_obj.next_page_number }}</a>
+        {% if page_obj.paginator.num_pages != page_obj.next_page_number %}
+            ...
+            <a href="?page={{page_obj.paginator.num_pages}}">{{ page_obj.paginator.num_pages }}</a>
+        {% endif %}
+    {% endif %}
+
+
+
+{% endblock content %}

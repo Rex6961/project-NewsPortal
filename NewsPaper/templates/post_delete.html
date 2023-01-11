@@ -1,0 +1,17 @@
+{% extends 'flatpages/default.html' %}
+
+{% block content %}
+<h1>
+    {% if object.change_news in 'AR' %}
+    <p>Удалить статью</p>
+{% else %}
+    <p>Удалить новость</p>
+{% endif %}
+</h1>
+<hr>
+<form action="" method="post">
+    {% csrf_token %}
+    <p>Удаляем"{{object.head_news}}"?</p>
+    <input type="submit" value="Удалить" />
+</form>
+{% endblock content %}

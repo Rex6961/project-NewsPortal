@@ -1,0 +1,85 @@
+user_1 = User.objects.create(username = 'Oleg')
+user_2 = User.objects.create(username = 'Anna')
+
+Author.object.create(authUser = user_1)
+Author.objects.create(authUser = user_2)
+
+Category.objects.create(category = 'Python')
+Category.objects.create(category = 'Drive')
+Category.objects.create(category = 'Woman')
+Category.objects.create(category = 'Animals')
+
+author_1 = Author.objects.get(id=1)
+author_2 = Author.objects.get(id=1)
+
+Post.objects.create(author=author_1, head_news = 'Python_lite', text_news = 'Погружение в python с улыбкой')
+
+Post.objects.create(author=author_2, head_news = 'Woman life', text_news = '10 плюсов быть женщиной')
+
+Post.objects.create(author=author_2,change_news = 'NE', head_news = 'Lion Pride', text_news = 'Почему нужно иметь клыки, что бы выжить')
+
+Post.objects.get(id=1).category.add(Category.objects.get(id=1))
+
+Post.objects.get(id=2).category.add(Category.objects.get(id=3))
+
+Post.objects.get(id=2).category.add(Category.objects.get(id=4))
+
+Post.objects.get(id=3).category.add(Category.objects.get(id=4))
+
+Comment.objects.create(post=Post.objects.get(id=1), authUser=Author.objects.get(id=1).authUser, text_comment='not so bad')
+
+Comment.objects.create(post=Post.objects.get(id=2), authUser=Author.objects.get(id=2).authUser, text_comment='Good')
+
+Comment.objects.create(post=Post.objects.get(id=3), authUser=Author.objects.get(id=2).authUser, text_comment='Great')
+
+Comment.objects.create(post=Post.objects.get(id=2), authUser=Author.objects.get(id=1).authUser, text_comment='nice')
+
+Comment.objects.get(id=1).like()
+Comment.objects.get(id=1).dislike()
+Comment.objects.get(id=1).dislike()
+Comment.objects.get(id=2).like()
+Comment.objects.get(id=3).dislike()
+Comment.objects.get(id=4).like()
+Comment.objects.get(id=4).like()
+Comment.objects.get(id=4).like()
+
+author_1 = Author.objects.get(id=1)
+author_2 = Author.objects.get(id=2)
+
+author_1.update_rating()
+author_2.update_rating()
+
+Post.objects.get(id=1).like()
+Post.objects.get(id=1).dislike()
+Post.objects.get(id=1).like()
+Post.objects.get(id=2).like()
+Post.objects.get(id=2).like()
+Post.objects.get(id=3).dislike()
+
+author_1.update_rating()
+author_2.update_rating()
+
+author_1.rateAuthor
+author_2.rateAuthor
+
+author = Author.objects.order_by('-rateAuthor')[:1]
+
+for i in author:
+	i.ratingAuthor
+	i.authorUser.username
+
+post = Post.objects.order_by('-rate_news')[:1]
+
+for i in post:
+	i.time_in
+	i.author.authUser
+	i.head_new
+	i.preview()
+
+comment = Comment.objects.order_by('-rate_comment')[:1]
+
+for i in comment:
+	i.time_in
+	i.authUser
+	i.rate_comment
+	i.text_comment

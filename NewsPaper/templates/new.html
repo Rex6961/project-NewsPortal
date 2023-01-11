@@ -1,0 +1,23 @@
+{% extends 'flatpages/default.html' %}
+
+{% load custom_filters %}
+
+{% block title %}
+{{new.get_change_news_display}} {{new.head_news}}
+<a href="{% url 'news' %}">На главную</a>
+{% endblock title %}
+
+{% block content %}
+<table>
+    <tr>
+        <td><h3>{{new.head_news|censor}}</h3></td>
+        <tr>
+            <td>{{new.text_news|censor}}</td>
+        </tr>
+        <tr>
+            <td>Дата выхода {{new.get_change_news_display}} {{new.time_in|date:"d M y"}}</td>
+        </tr>
+    </tr>
+</table>
+
+{% endblock content %}
