@@ -3,7 +3,7 @@
 {% load custom_filters %}
 
 {% block title %}
-{{new.get_change_news_display}} {{new.head_news}}
+{{new.get_change_news_display}} {{new.head_news|censor}}
 <a href="{% url 'news' %}">На главную</a>
 {% endblock title %}
 

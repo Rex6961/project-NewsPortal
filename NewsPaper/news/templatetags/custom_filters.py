@@ -7,10 +7,13 @@ register = template.Library()
 
 @register.filter()
 def censor(word, code="*"):
-    word = word.lower().translate(str.maketrans('', '', string.punctuation))
+    wordMat = word.lower().translate(str.maketrans('', '', string.punctuation + string.digits))
     for mat in list_mat:
-        if mat in word:
-            word = word.replace(mat[1:], code * (len(mat) - 1))
+        while mat in wordMat:
+            word_a = wordMat.replace(mat[1:], code * (len(mat) - 1))
+            print(word_a)
+            wordMat = word_a
+            word = wordMat
     return f'{word}'
 
 @register.simple_tag(takes_context=True)

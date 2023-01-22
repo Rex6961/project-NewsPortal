@@ -6,6 +6,7 @@ from django.views.generic import (
     ListView, DetailView, CreateView, UpdateView, DeleteView
 )
 from django.urls import reverse_lazy
+from django.core.cache import cache
 
 from .models import Post, Category
 from .filters import PostFilter
@@ -23,6 +24,15 @@ class New(DetailView):
     model = Post
     template_name = 'new.html'
     context_object_name = 'new'
+    queryset = Post.objects.all()
+
+    def get_object(self, *args, **kwargs):
+        obj = cache.get(f'post-{self.kwargs["pk"]}', None)
+        if not obj:
+            obj = super().get_object(queryset=self.queryset)
+            cache.set(f'post-{self.kwargs["pk"]}', obj)
+
+        return obj
 
 class Search(ListView):
     model = Post
