@@ -39,7 +39,7 @@ class Category(models.Model):
 class Post(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     category = models.ManyToManyField(Category, through='PostCategory')
-
+    
     NEWS = 'NE'
     ARTICLE = 'AR'
 
