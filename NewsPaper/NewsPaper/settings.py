@@ -184,3 +184,100 @@ CACHES = {
         'TIMEOUT': 60,
     }
 }
+
+
+#Todo Доработать логгер
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'loggers': {
+            'django': {
+                'handlers': ['my_console', 'my_general'],
+                'propagate': True,
+            },
+            'django.request': {
+                'handlers': ['my_mail_admins', 'my_errors'],
+                'level': 'ERROR',
+                'propagate': False,
+            },
+            'django.sever': {
+                'handlers': ['my_mail_admins', 'my_errors'],
+                'level': 'ERROR',
+                'propagate': False,
+            },
+            'django.template': {
+                'handlers': ['my_errors'],
+            },
+            'django.security': {
+                'handlers': ['my_security'],
+            },
+            'django.db.backends': {
+                'handlers': ['my_errors'],
+            },
+        },
+    'handlers': {
+            'my_console': {
+                'level': 'DEBUG',
+                'class': 'logging.StreamHandler',
+                'formatter': 'first',
+                'filters': ['require_debug_true']
+            },
+            'my_general': {
+                'level': 'INFO',
+                'class': 'logging.FileHandler',
+                'filename': 'temp/general.log',
+                'formatter': 'first',
+                'filters': ['require_debug_true']
+            },
+            'my_security': {
+                'level': 'WARNING',
+                'class': 'logging.FileHandler',
+                'filename': 'temp/security.log',
+                'formatter': 'fourth',
+                'filters': ['require_debug_false']
+            },
+            'my_mail_admins': {
+                'level': 'ERROR',
+                'class': 'django.utils.log.AdminEmailHandler',
+                'formatter': 'second',
+                'filters': ['require_debug_false']
+            },
+            'my_errors': {
+                'level': 'ERROR',
+                'class': 'logging.FileHandler',
+                'filename': 'temp/errors.log',
+                'formatter': 'third',
+                'filters': ['require_debug_false']
+            },
+        },
+    'filters': {
+            'require_debug_true': {
+                '()': 'django.utils.log.RequireDebugTrue',
+            },
+            'require_debug_false': {
+                '()': 'django.utils.log.RequireDebugFalse',
+            },
+        },
+    'formatters': {
+        'first': {
+            'format': '{asctime} {levelname} {message}',
+            'datetime': '%Y.%m.%d %H:%M:%S',
+            'style': '{',
+        },
+        'second': {
+            'format': '{asctime} {levelname} {message} {pathname}',
+            'datetime': '%Y.%m.%d %H:%M:%S',
+            'style': '{',
+        },
+        'third': {
+            'format': '{asctime} {levelname} {message} {pathname} {exc_info}',
+            'datetime': '%Y.%m.%d %H:%M:%S',
+            'style': '{',
+        },
+        'fourth': {
+            'format': '{asctime} {levelname} {module} {message}',
+            'timetime': '%Y.%m.%d %H:%M:%S',
+            'style': '{',
+        },
+    },
+}

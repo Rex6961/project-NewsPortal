@@ -8,11 +8,17 @@ from django.views.generic import (
 from django.urls import reverse_lazy
 from django.core.cache import cache
 
+import logging
+
 from .models import Post, Category
 from .filters import PostFilter
 from .forms import PostForm
 
-# Create your views here.
+
+#for logging
+logger = logging.getLogger(__name__)
+
+# Create your views here.    
 class News(ListView):
     model = Post
     ordering = '-time_in'
