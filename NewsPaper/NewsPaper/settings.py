@@ -185,13 +185,21 @@ CACHES = {
     }
 }
 
+ADMINS = [('Oleg', 'rex696@yandex.ru')]
+
 
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'loggers': {
             'django': {
-                'handlers': ['my_console', 'my_general'],
+                'handlers': [
+                    'my_console',
+                    'my_general',
+                    'my_console_warning',
+                    'my_console_error_critical'
+                ],
+                'level': 'DEBUG',
                 'propagate': True,
             },
             'django.request': {
@@ -199,19 +207,22 @@ LOGGING = {
                 'level': 'ERROR',
                 'propagate': False,
             },
-            'django.sever': {
+            'django.server': {
                 'handlers': ['my_mail_admins', 'my_errors'],
                 'level': 'ERROR',
                 'propagate': False,
             },
             'django.template': {
                 'handlers': ['my_errors'],
+                'level': 'ERROR',
             },
             'django.security': {
                 'handlers': ['my_security'],
+                'level': 'INFO',
             },
             'django.db.backends': {
                 'handlers': ['my_errors'],
+                'level': 'ERROR',
             },
         },
     'handlers': {
@@ -219,34 +230,45 @@ LOGGING = {
                 'level': 'DEBUG',
                 'class': 'logging.StreamHandler',
                 'formatter': 'first',
-                'filters': ['require_debug_true']
+                'filters': ['require_debug_true'],
+            },
+            'my_console_warning': {
+                'level': 'WARNING',
+                'class': 'logging.StreamHandler',
+                'formatter': 'second',
+                'filters': ['require_debug_true'],
+            },
+            'my_console_error_critical': {
+                'level': 'ERROR',
+                'class': 'logging.StreamHandler',
+                'formatter': 'third',
+                'filters': ['require_debug_true'],
             },
             'my_general': {
                 'level': 'INFO',
                 'class': 'logging.FileHandler',
                 'filename': 'temp/general.log',
                 'formatter': 'first',
-                'filters': ['require_debug_true']
+                'filters': ['require_debug_false'],
             },
             'my_security': {
-                'level': 'WARNING',
+                'level': 'INFO',
                 'class': 'logging.FileHandler',
                 'filename': 'temp/security.log',
                 'formatter': 'fourth',
-                'filters': ['require_debug_false']
             },
             'my_mail_admins': {
                 'level': 'ERROR',
                 'class': 'django.utils.log.AdminEmailHandler',
+                'include_html': True,
                 'formatter': 'second',
-                'filters': ['require_debug_false']
+                'filters': ['require_debug_false'],
             },
             'my_errors': {
                 'level': 'ERROR',
                 'class': 'logging.FileHandler',
                 'filename': 'temp/errors.log',
                 'formatter': 'third',
-                'filters': ['require_debug_false']
             },
         },
     'filters': {
