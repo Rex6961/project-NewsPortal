@@ -1,3 +1,8 @@
+from django.utils.translation import gettext as _
+from django.views.generic import View
+from django.http import HttpResponse
+
+
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.auth.models import Group
@@ -18,7 +23,14 @@ from .forms import PostForm
 #for logging
 logger = logging.getLogger(__name__)
 
-# Create your views here.    
+# Create your views here.
+class Index(View):
+    def get(self, request):
+        string = _('Hello world')
+
+        return HttpResponse(string)
+
+
 class News(ListView):
     model = Post
     ordering = '-time_in'
