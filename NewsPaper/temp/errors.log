@@ -1,0 +1,1218 @@
+2023-03-03 15:41:34,632 ERROR Internal Server Error: /admin/news/post/add/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'AttributeError'>, AttributeError("'NoneType' object has no attribute 'required'"), <traceback object at 0x00000211D8137FC0>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 1890, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 1750, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 1785, in _changeform_view
+    fieldsets = self.get_fieldsets(request, obj)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 360, in get_fieldsets
+    request, self.get_form(request, obj, fields=None), obj
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 355, in get_form
+    return super(TranslationAdmin, self).get_form(request, obj, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 807, in get_form
+    return modelform_factory(self.model, **defaults)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\forms\models.py", line 648, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\forms\models.py", line 306, in __new__
+    fields = fields_for_model(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\forms\models.py", line 228, in fields_for_model
+    formfield = formfield_callback(f, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 53, in formfield_for_dbfield
+    self.patch_translation_field(db_field, field, request, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 70, in patch_translation_field
+    orig_formfield = self.formfield_for_dbfield(orig_field, request, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 53, in formfield_for_dbfield
+    self.patch_translation_field(db_field, field, request, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 58, in patch_translation_field
+    if field.required:
+AttributeError: 'NoneType' object has no attribute 'required'
+2023-03-03 15:41:34,635 ERROR "GET /admin/news/post/add/ HTTP/1.1" 500 163712 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 15:46:41,481 ERROR Internal Server Error: /admin/news/post/add/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'AttributeError'>, AttributeError("'NoneType' object has no attribute 'required'"), <traceback object at 0x00000211D80EC700>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 1890, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 1750, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 1785, in _changeform_view
+    fieldsets = self.get_fieldsets(request, obj)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 360, in get_fieldsets
+    request, self.get_form(request, obj, fields=None), obj
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 355, in get_form
+    return super(TranslationAdmin, self).get_form(request, obj, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 807, in get_form
+    return modelform_factory(self.model, **defaults)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\forms\models.py", line 648, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\forms\models.py", line 306, in __new__
+    fields = fields_for_model(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\forms\models.py", line 228, in fields_for_model
+    formfield = formfield_callback(f, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 53, in formfield_for_dbfield
+    self.patch_translation_field(db_field, field, request, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 70, in patch_translation_field
+    orig_formfield = self.formfield_for_dbfield(orig_field, request, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 53, in formfield_for_dbfield
+    self.patch_translation_field(db_field, field, request, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 58, in patch_translation_field
+    if field.required:
+AttributeError: 'NoneType' object has no attribute 'required'
+2023-03-03 15:46:41,482 ERROR "GET /admin/news/post/add/ HTTP/1.1" 500 163849 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 15:46:42,319 ERROR Internal Server Error: /admin/news/post/add/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'AttributeError'>, AttributeError("'NoneType' object has no attribute 'required'"), <traceback object at 0x00000211D80A5000>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 1890, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 1750, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 1785, in _changeform_view
+    fieldsets = self.get_fieldsets(request, obj)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 360, in get_fieldsets
+    request, self.get_form(request, obj, fields=None), obj
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 355, in get_form
+    return super(TranslationAdmin, self).get_form(request, obj, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 807, in get_form
+    return modelform_factory(self.model, **defaults)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\forms\models.py", line 648, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\forms\models.py", line 306, in __new__
+    fields = fields_for_model(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\forms\models.py", line 228, in fields_for_model
+    formfield = formfield_callback(f, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 53, in formfield_for_dbfield
+    self.patch_translation_field(db_field, field, request, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 70, in patch_translation_field
+    orig_formfield = self.formfield_for_dbfield(orig_field, request, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 53, in formfield_for_dbfield
+    self.patch_translation_field(db_field, field, request, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 58, in patch_translation_field
+    if field.required:
+AttributeError: 'NoneType' object has no attribute 'required'
+2023-03-03 15:46:42,321 ERROR "GET /admin/news/post/add/ HTTP/1.1" 500 163849 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 15:46:51,563 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'django.utils.datastructures.MultiValueDictKeyError'>, MultiValueDictKeyError('timezone'), <traceback object at 0x00000211D7F4E600>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'timezone'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\NewsPaper\news\views.py", line 42, in post
+    request.session['django_timezone'] = request.POST['timezone']
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'timezone'
+2023-03-03 15:46:51,565 ERROR "POST /news/ HTTP/1.1" 500 89941 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 15:47:01,017 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'django.utils.datastructures.MultiValueDictKeyError'>, MultiValueDictKeyError('timezone'), <traceback object at 0x00000211D7F32240>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'timezone'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\NewsPaper\news\views.py", line 42, in post
+    request.session['django_timezone'] = request.POST['timezone']
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'timezone'
+2023-03-03 15:47:01,018 ERROR "POST /news/ HTTP/1.1" 500 89941 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 15:47:03,489 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'django.utils.datastructures.MultiValueDictKeyError'>, MultiValueDictKeyError('timezone'), <traceback object at 0x00000211D80E19C0>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'timezone'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\NewsPaper\news\views.py", line 42, in post
+    request.session['django_timezone'] = request.POST['timezone']
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'timezone'
+2023-03-03 15:47:03,490 ERROR "POST /news/ HTTP/1.1" 500 89941 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 15:47:05,897 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'django.utils.datastructures.MultiValueDictKeyError'>, MultiValueDictKeyError('timezone'), <traceback object at 0x00000211D7F08F00>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'timezone'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\NewsPaper\news\views.py", line 42, in post
+    request.session['django_timezone'] = request.POST['timezone']
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'timezone'
+2023-03-03 15:47:05,899 ERROR "POST /news/ HTTP/1.1" 500 89941 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 17:40:50,517 ERROR Internal Server Error: /admin/news/post/3/change/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'AttributeError'>, AttributeError("'NoneType' object has no attribute 'required'"), <traceback object at 0x000001F7CA67A700>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 1893, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 1750, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 1785, in _changeform_view
+    fieldsets = self.get_fieldsets(request, obj)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 360, in get_fieldsets
+    request, self.get_form(request, obj, fields=None), obj
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 355, in get_form
+    return super(TranslationAdmin, self).get_form(request, obj, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 807, in get_form
+    return modelform_factory(self.model, **defaults)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\forms\models.py", line 648, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\forms\models.py", line 306, in __new__
+    fields = fields_for_model(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\forms\models.py", line 228, in fields_for_model
+    formfield = formfield_callback(f, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 53, in formfield_for_dbfield
+    self.patch_translation_field(db_field, field, request, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 70, in patch_translation_field
+    orig_formfield = self.formfield_for_dbfield(orig_field, request, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 53, in formfield_for_dbfield
+    self.patch_translation_field(db_field, field, request, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 58, in patch_translation_field
+    if field.required:
+AttributeError: 'NoneType' object has no attribute 'required'
+2023-03-03 17:40:50,519 ERROR "GET /admin/news/post/3/change/ HTTP/1.1" 500 164447 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 17:40:54,232 ERROR Internal Server Error: /admin/news/post/3/change/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'AttributeError'>, AttributeError("'NoneType' object has no attribute 'required'"), <traceback object at 0x000001F7CA5CAE00>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 1893, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 1750, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 1785, in _changeform_view
+    fieldsets = self.get_fieldsets(request, obj)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 360, in get_fieldsets
+    request, self.get_form(request, obj, fields=None), obj
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 355, in get_form
+    return super(TranslationAdmin, self).get_form(request, obj, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 807, in get_form
+    return modelform_factory(self.model, **defaults)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\forms\models.py", line 648, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\forms\models.py", line 306, in __new__
+    fields = fields_for_model(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\forms\models.py", line 228, in fields_for_model
+    formfield = formfield_callback(f, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 53, in formfield_for_dbfield
+    self.patch_translation_field(db_field, field, request, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 70, in patch_translation_field
+    orig_formfield = self.formfield_for_dbfield(orig_field, request, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 53, in formfield_for_dbfield
+    self.patch_translation_field(db_field, field, request, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 58, in patch_translation_field
+    if field.required:
+AttributeError: 'NoneType' object has no attribute 'required'
+2023-03-03 17:40:54,233 ERROR "GET /admin/news/post/3/change/ HTTP/1.1" 500 164447 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 17:40:58,209 ERROR Internal Server Error: /admin/news/post/2/change/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'AttributeError'>, AttributeError("'NoneType' object has no attribute 'required'"), <traceback object at 0x000001F7CB798900>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 686, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 1893, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 1750, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 1785, in _changeform_view
+    fieldsets = self.get_fieldsets(request, obj)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 360, in get_fieldsets
+    request, self.get_form(request, obj, fields=None), obj
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 355, in get_form
+    return super(TranslationAdmin, self).get_form(request, obj, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\contrib\admin\options.py", line 807, in get_form
+    return modelform_factory(self.model, **defaults)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\forms\models.py", line 648, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\forms\models.py", line 306, in __new__
+    fields = fields_for_model(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\forms\models.py", line 228, in fields_for_model
+    formfield = formfield_callback(f, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 53, in formfield_for_dbfield
+    self.patch_translation_field(db_field, field, request, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 70, in patch_translation_field
+    orig_formfield = self.formfield_for_dbfield(orig_field, request, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 53, in formfield_for_dbfield
+    self.patch_translation_field(db_field, field, request, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\modeltranslation\admin.py", line 58, in patch_translation_field
+    if field.required:
+AttributeError: 'NoneType' object has no attribute 'required'
+2023-03-03 17:40:58,210 ERROR "GET /admin/news/post/2/change/ HTTP/1.1" 500 164483 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 18:04:13,870 ERROR Internal Server Error: /news/1 E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'TypeError'>, TypeError("New.get() got an unexpected keyword argument 'pk'"), <traceback object at 0x00000167FC0A4D80>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: New.get() got an unexpected keyword argument 'pk'
+2023-03-03 18:04:13,872 ERROR "GET /news/1 HTTP/1.1" 500 77216 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 18:04:19,876 ERROR Internal Server Error: /news/1 E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'TypeError'>, TypeError("New.get() got an unexpected keyword argument 'pk'"), <traceback object at 0x00000167FC3132C0>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: New.get() got an unexpected keyword argument 'pk'
+2023-03-03 18:04:19,877 ERROR "GET /news/1 HTTP/1.1" 500 77347 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 18:04:20,729 ERROR Internal Server Error: /news/1 E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'TypeError'>, TypeError("New.get() got an unexpected keyword argument 'pk'"), <traceback object at 0x00000167FC041780>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: New.get() got an unexpected keyword argument 'pk'
+2023-03-03 18:04:20,730 ERROR "GET /news/1 HTTP/1.1" 500 77347 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 18:05:09,530 ERROR Internal Server Error: /news/1 E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'TypeError'>, TypeError("New.get() got an unexpected keyword argument 'pk'"), <traceback object at 0x0000020EE09F10C0>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: New.get() got an unexpected keyword argument 'pk'
+2023-03-03 18:05:09,531 ERROR "GET /news/1 HTTP/1.1" 500 77216 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 18:09:11,862 ERROR Internal Server Error: /news/1 E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'TypeError'>, TypeError("New.get() got an unexpected keyword argument 'pk'"), <traceback object at 0x000001D6E98BC180>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: New.get() got an unexpected keyword argument 'pk'
+2023-03-03 18:09:11,863 ERROR "GET /news/1 HTTP/1.1" 500 77210 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 18:09:14,514 ERROR Internal Server Error: /news/1 E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'TypeError'>, TypeError("New.get() got an unexpected keyword argument 'pk'"), <traceback object at 0x000001D6E9B4C4C0>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: New.get() got an unexpected keyword argument 'pk'
+2023-03-03 18:09:14,514 ERROR "GET /news/1 HTTP/1.1" 500 77347 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 18:09:15,270 ERROR Internal Server Error: /news/1 E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'TypeError'>, TypeError("New.get() got an unexpected keyword argument 'pk'"), <traceback object at 0x000001D6E9B8C6C0>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: New.get() got an unexpected keyword argument 'pk'
+2023-03-03 18:09:15,271 ERROR "GET /news/1 HTTP/1.1" 500 77347 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 18:27:49,164 ERROR Internal Server Error: /news/1 E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'TypeError'>, TypeError("New.post() got an unexpected keyword argument 'pk'"), <traceback object at 0x000002667AB47A00>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: New.post() got an unexpected keyword argument 'pk'
+2023-03-03 18:27:49,165 ERROR "POST /news/1 HTTP/1.1" 500 78036 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 18:29:57,034 ERROR Internal Server Error: /news/1 E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'TypeError'>, TypeError("New.post() got an unexpected keyword argument 'pk'"), <traceback object at 0x0000029E80C52D00>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: New.post() got an unexpected keyword argument 'pk'
+2023-03-03 18:29:57,035 ERROR "POST /news/1 HTTP/1.1" 500 78036 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 18:30:23,509 ERROR Internal Server Error: /news/1 E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'TypeError'>, TypeError("New.post() got an unexpected keyword argument 'pk'"), <traceback object at 0x000002AD1D5C8400>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: New.post() got an unexpected keyword argument 'pk'
+2023-03-03 18:30:23,511 ERROR "POST /news/1 HTTP/1.1" 500 78036 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 18:30:27,802 ERROR Internal Server Error: /news/1 E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'TypeError'>, TypeError("New.post() got an unexpected keyword argument 'pk'"), <traceback object at 0x000002AD1D617E80>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: New.post() got an unexpected keyword argument 'pk'
+2023-03-03 18:30:27,803 ERROR "POST /news/1 HTTP/1.1" 500 78036 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 18:34:33,608 ERROR Internal Server Error: /news/1 E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'TypeError'>, TypeError("New.post() got an unexpected keyword argument 'pk'"), <traceback object at 0x000001E9F07696C0>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: New.post() got an unexpected keyword argument 'pk'
+2023-03-03 18:34:33,609 ERROR "POST /news/1 HTTP/1.1" 500 78036 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 18:34:36,600 ERROR Internal Server Error: /news/1 E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'TypeError'>, TypeError("New.post() got an unexpected keyword argument 'pk'"), <traceback object at 0x000001E9F0A37240>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: New.post() got an unexpected keyword argument 'pk'
+2023-03-03 18:34:36,600 ERROR "POST /news/1 HTTP/1.1" 500 78036 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 18:34:41,840 ERROR Internal Server Error: /news/1 E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'TypeError'>, TypeError("New.post() got an unexpected keyword argument 'pk'"), <traceback object at 0x000001E9F078EF00>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: New.post() got an unexpected keyword argument 'pk'
+2023-03-03 18:34:41,840 ERROR "POST /news/1 HTTP/1.1" 500 78036 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-03 18:51:05,856 ERROR Internal Server Error: /news/1 E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'TypeError'>, TypeError("New.post() got an unexpected keyword argument 'pk'"), <traceback object at 0x000001E9F09BC780>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: New.post() got an unexpected keyword argument 'pk'
+2023-03-03 18:51:05,857 ERROR "POST /news/1 HTTP/1.1" 500 78034 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 12:07:11,961 ERROR Internal Server Error: /news/categories/1 E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 15: 'get_hour'. Did you forget to register or load this tag?"), <traceback object at 0x0000023F5D865A80>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_hour'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 15: 'get_hour'. Did you forget to register or load this tag?
+2023-03-04 12:07:11,973 ERROR "GET /news/categories/1 HTTP/1.1" 500 188126 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 12:42:21,670 ERROR Internal Server Error: /news/categories/1 E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 15: 'get_hour'. Did you forget to register or load this tag?"), <traceback object at 0x000001C894A2B600>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_hour'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 15: 'get_hour'. Did you forget to register or load this tag?
+2023-03-04 12:42:21,676 ERROR "GET /news/categories/1 HTTP/1.1" 500 188126 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 12:42:24,659 ERROR Internal Server Error: /news/categories/1 E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 15: 'get_hour'. Did you forget to register or load this tag?"), <traceback object at 0x000001C89497C680>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_hour'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 15: 'get_hour'. Did you forget to register or load this tag?
+2023-03-04 12:42:24,661 ERROR "GET /news/categories/1 HTTP/1.1" 500 188126 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 12:42:29,397 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'ValueError'>, ValueError('localtime() cannot be applied to a naive datetime'), <traceback object at 0x000001C894A62800>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "E:\LESSONS\News_portal\NewsPaper\news\views.py", line 33, in get_context_data
+    context['current_time'] = timezone.localtime(timezone.now())
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\timezone.py", line 218, in localtime
+    raise ValueError("localtime() cannot be applied to a naive datetime")
+ValueError: localtime() cannot be applied to a naive datetime
+2023-03-04 12:42:29,399 ERROR "GET /news/ HTTP/1.1" 500 88841 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 12:49:12,589 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'ValueError'>, ValueError('localtime() cannot be applied to a naive datetime'), <traceback object at 0x00000254A887A200>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "E:\LESSONS\News_portal\NewsPaper\news\views.py", line 50, in get_context_data
+    current_time = timezone.localtime(timezone.now())
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\timezone.py", line 218, in localtime
+    raise ValueError("localtime() cannot be applied to a naive datetime")
+ValueError: localtime() cannot be applied to a naive datetime
+2023-03-04 12:49:12,591 ERROR "GET /news/ HTTP/1.1" 500 89211 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 12:49:13,542 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'ValueError'>, ValueError('localtime() cannot be applied to a naive datetime'), <traceback object at 0x00000254A8921F80>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "E:\LESSONS\News_portal\NewsPaper\news\views.py", line 50, in get_context_data
+    current_time = timezone.localtime(timezone.now())
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\timezone.py", line 218, in localtime
+    raise ValueError("localtime() cannot be applied to a naive datetime")
+ValueError: localtime() cannot be applied to a naive datetime
+2023-03-04 12:49:13,544 ERROR "GET /news/ HTTP/1.1" 500 89211 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 12:49:14,415 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'ValueError'>, ValueError('localtime() cannot be applied to a naive datetime'), <traceback object at 0x00000254A86BC700>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "E:\LESSONS\News_portal\NewsPaper\news\views.py", line 50, in get_context_data
+    current_time = timezone.localtime(timezone.now())
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\timezone.py", line 218, in localtime
+    raise ValueError("localtime() cannot be applied to a naive datetime")
+ValueError: localtime() cannot be applied to a naive datetime
+2023-03-04 12:49:14,416 ERROR "GET /news/ HTTP/1.1" 500 89211 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 12:49:15,206 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'ValueError'>, ValueError('localtime() cannot be applied to a naive datetime'), <traceback object at 0x00000254A86BDC40>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "E:\LESSONS\News_portal\NewsPaper\news\views.py", line 50, in get_context_data
+    current_time = timezone.localtime(timezone.now())
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\timezone.py", line 218, in localtime
+    raise ValueError("localtime() cannot be applied to a naive datetime")
+ValueError: localtime() cannot be applied to a naive datetime
+2023-03-04 12:49:15,207 ERROR "GET /news/ HTTP/1.1" 500 89211 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 12:49:15,934 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'ValueError'>, ValueError('localtime() cannot be applied to a naive datetime'), <traceback object at 0x00000254A8B13740>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "E:\LESSONS\News_portal\NewsPaper\news\views.py", line 50, in get_context_data
+    current_time = timezone.localtime(timezone.now())
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\timezone.py", line 218, in localtime
+    raise ValueError("localtime() cannot be applied to a naive datetime")
+ValueError: localtime() cannot be applied to a naive datetime
+2023-03-04 12:49:15,968 ERROR "GET /news/ HTTP/1.1" 500 89211 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 12:49:17,283 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'ValueError'>, ValueError('localtime() cannot be applied to a naive datetime'), <traceback object at 0x00000254A8AFAB00>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "E:\LESSONS\News_portal\NewsPaper\news\views.py", line 50, in get_context_data
+    current_time = timezone.localtime(timezone.now())
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\timezone.py", line 218, in localtime
+    raise ValueError("localtime() cannot be applied to a naive datetime")
+ValueError: localtime() cannot be applied to a naive datetime
+2023-03-04 12:49:17,284 ERROR "GET /news/ HTTP/1.1" 500 89211 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 12:49:55,560 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 15: 'get_hour'. Did you forget to register or load this tag?"), <traceback object at 0x000002808C08C340>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_hour'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 15: 'get_hour'. Did you forget to register or load this tag?
+2023-03-04 12:49:55,564 ERROR "GET /news/ HTTP/1.1" 500 242283 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 12:49:58,462 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 15: 'get_hour'. Did you forget to register or load this tag?"), <traceback object at 0x000002808BEDC740>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_hour'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 15: 'get_hour'. Did you forget to register or load this tag?
+2023-03-04 12:49:58,462 ERROR "GET /news/ HTTP/1.1" 500 242283 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 14:47:06,798 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("'get_hour' is not a registered tag library. Must be one of:\naccount\nadmin_list\nadmin_modify\nadmin_urls\ncache\ncustom_filters\nflatpages\ni18n\nl10n\nlog\nsocialaccount\nstatic\ntz"), <traceback object at 0x000001C9FD7F8240>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\defaulttags.py", line 1027, in find_library
+    return parser.libraries[name]
+KeyError: 'get_hour'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\defaulttags.py", line 1089, in load
+    lib = find_library(parser, name)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\defaulttags.py", line 1029, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'get_hour' is not a registered tag library. Must be one of:
+account
+admin_list
+admin_modify
+admin_urls
+cache
+custom_filters
+flatpages
+i18n
+l10n
+log
+socialaccount
+static
+tz
+2023-03-04 14:47:06,803 ERROR "GET /news/ HTTP/1.1" 500 257519 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 14:49:04,784 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("'get_hour' is not a registered tag library. Must be one of:\naccount\nadmin_list\nadmin_modify\nadmin_urls\ncache\ncustom_filters\nflatpages\ni18n\nl10n\nlog\nsocialaccount\nstatic\ntz"), <traceback object at 0x000001C9FD6B9C40>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\defaulttags.py", line 1027, in find_library
+    return parser.libraries[name]
+KeyError: 'get_hour'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\defaulttags.py", line 1089, in load
+    lib = find_library(parser, name)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\template\defaulttags.py", line 1029, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'get_hour' is not a registered tag library. Must be one of:
+account
+admin_list
+admin_modify
+admin_urls
+cache
+custom_filters
+flatpages
+i18n
+l10n
+log
+socialaccount
+static
+tz
+2023-03-04 14:49:04,785 ERROR "GET /news/ HTTP/1.1" 500 257382 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 14:59:25,444 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'ValueError'>, ValueError('localtime() cannot be applied to a naive datetime'), <traceback object at 0x000001A0ACEB30C0>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\list.py", line 174, in get
+    context = self.get_context_data()
+  File "E:\LESSONS\News_portal\NewsPaper\news\views.py", line 50, in get_context_data
+    current_time = timezone.localtime(timezone.now())
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\timezone.py", line 218, in localtime
+    raise ValueError("localtime() cannot be applied to a naive datetime")
+ValueError: localtime() cannot be applied to a naive datetime
+2023-03-04 14:59:25,447 ERROR "GET /news/ HTTP/1.1" 500 89211 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 15:00:21,686 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("'news' is not a registered namespace"), <traceback object at 0x0000021435E810C0>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'news'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\NewsPaper\news\views.py", line 47, in post
+    return redirect('news:news')
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'news' is not a registered namespace
+2023-03-04 15:00:21,687 ERROR "POST /news/ HTTP/1.1" 500 102063 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 15:01:05,378 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("'news' is not a registered namespace"), <traceback object at 0x000002BA54CA1880>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'news'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\NewsPaper\news\views.py", line 47, in post
+    return redirect('news:news')
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'news' is not a registered namespace
+2023-03-04 15:01:05,380 ERROR "POST /news/ HTTP/1.1" 500 102060 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 15:01:08,856 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("'news' is not a registered namespace"), <traceback object at 0x000002BA55018D00>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'news'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\NewsPaper\news\views.py", line 47, in post
+    return redirect('news:news')
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'news' is not a registered namespace
+2023-03-04 15:01:08,856 ERROR "POST /news/ HTTP/1.1" 500 102060 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 15:01:11,507 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("'news' is not a registered namespace"), <traceback object at 0x000002BA5501A2C0>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'news'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\NewsPaper\news\views.py", line 47, in post
+    return redirect('news:news')
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'news' is not a registered namespace
+2023-03-04 15:01:11,509 ERROR "POST /news/ HTTP/1.1" 500 102060 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None
+2023-03-04 15:01:28,903 ERROR Internal Server Error: /news/ E:\LESSONS\News_portal\venv\lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("'news' is not a registered namespace"), <traceback object at 0x000002BA553378C0>)
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'news'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "E:\LESSONS\News_portal\NewsPaper\news\views.py", line 47, in post
+    return redirect('news:news')
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "E:\LESSONS\News_portal\venv\lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'news' is not a registered namespace
+2023-03-04 15:01:28,904 ERROR "POST /news/ HTTP/1.1" 500 102060 E:\LESSONS\News_portal\venv\lib\site-packages\django\core\servers\basehttp.py None

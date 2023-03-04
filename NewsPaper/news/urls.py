@@ -1,13 +1,11 @@
 from django.urls import path
 from .views import (
     New, News, Search, ArticlesPostCreate, NewsPostCreate, ArticlesPostUpdate,
-    NewsPostUpdate, ArticlesPostDelete, NewsPostDelete, CategoryListView, subscribe,
-    Index
+    NewsPostUpdate, ArticlesPostDelete, NewsPostDelete, CategoryListView, subscribe
 )
 
 urlpatterns = [
     path('', News.as_view(), name='news'),
-    path('index', Index.as_view()),
     path('<int:pk>', New.as_view(), name='new'),
     path('search/', Search.as_view(), name='search'),
     path('articles/create/', ArticlesPostCreate.as_view(), name='articles_post_create'),

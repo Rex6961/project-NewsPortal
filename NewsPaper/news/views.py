@@ -1,17 +1,15 @@
-from django.utils.translation import gettext as _
-from django.views.generic import View
-from django.http import HttpResponse
-
-
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.contrib.auth.models import Group
-from django.shortcuts import redirect, get_object_or_404, render
+from django.shortcuts import redirect, get_object_or_404, render, HttpResponse
 from django.views.generic import (
     ListView, DetailView, CreateView, UpdateView, DeleteView
 )
 from django.urls import reverse_lazy
 from django.core.cache import cache
+from django.utils import timezone
+import pytz
+
 
 import logging
 
@@ -24,12 +22,11 @@ from .forms import PostForm
 logger = logging.getLogger(__name__)
 
 # Create your views here.
-class Index(View):
-    def get(self, request):
-        string = _('Hello world')
-
-        return HttpResponse(string)
-
+my_timezone = {
+        'Moscow': 'Europe/Moscow',
+        'Paris': 'Europe/Paris',
+        'New York': 'America/New_York',
+    }
 
 class News(ListView):
     model = Post
@@ -37,6 +34,24 @@ class News(ListView):
     template_name = 'news.html'
     context_object_name = 'news'
     paginate_by = 10
+
+    def set_timezone(request):
+        if request.method == 'POST':
+            request.session['django_timezone'] = request.POST['timezone']
+            return redirect('/news')
+        else:
+            return render(request, 'default.html', {'timezone': my_timezone})
+
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('/news')
+
+    def get_context_data(self, **kwargs):
+        current_time = timezone.localtime(timezone.now())
+        context = super().get_context_data(**kwargs)
+        context['current_time'] = current_time
+        context['timezones'] = pytz.common_timezones
+        return context
 
 class New(DetailView):
     model = Post
@@ -49,8 +64,8 @@ class New(DetailView):
         if not obj:
             obj = super().get_object(queryset=self.queryset)
             cache.set(f'post-{self.kwargs["pk"]}', obj)
-
         return obj
+
 
 class Search(ListView):
     model = Post
@@ -68,6 +83,7 @@ class Search(ListView):
         context = super().get_context_data(**kwargs)
         context['filterset'] = self.filterset
         return context
+
 
 class ArticlesPostCreate(PermissionRequiredMixin, CreateView):
     permission_required = ('news.add_post')

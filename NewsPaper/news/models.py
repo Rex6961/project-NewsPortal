@@ -3,13 +3,14 @@ from django.contrib.auth.models import User
 from django.db.models import Sum
 from django.urls import reverse
 from django.core.cache import cache
+from django.utils.translation import gettext as _
 
 # Create your models here.
 
 class Author(models.Model):
-    authUser = models.OneToOneField(User, on_delete=models.CASCADE)
+    authUser = models.OneToOneField(User, on_delete=models.CASCADE, help_text=_('Author'))
     
-    rateAuthor = models.SmallIntegerField(default=0)
+    rateAuthor = models.SmallIntegerField(default=0, help_text=_('Rate'))
 
     def update_rating(self):
         post_rate = self.post_set.aggregate(postRating=Sum('rate_news'))
@@ -29,29 +30,29 @@ class Author(models.Model):
 
 
 class Category(models.Model):
-    category = models.CharField(max_length=64, unique=True)
-    subscribers = models.ManyToManyField(User, related_name='categories')
+    category = models.CharField(max_length=64, unique=True, help_text=_('Category'))
+    subscribers = models.ManyToManyField(User, related_name='categories', help_text=_('Subscribers'))
 
     def __str__(self):
         return f'{self.category}'
 
 
 class Post(models.Model):
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    category = models.ManyToManyField(Category, through='PostCategory')
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, help_text=_('Author'))
+    category = models.ManyToManyField(Category, through='PostCategory', help_text=_('Category'))
     
     NEWS = 'NE'
     ARTICLE = 'AR'
 
     CATEGORY_CHOICES = (
-        (NEWS, 'Новости'),
-        (ARTICLE, 'Статья')
+        (NEWS, _('Новости')),
+        (ARTICLE, _('Статья'))
     )
-    change_news = models.CharField(max_length=2, choices=CATEGORY_CHOICES, default=ARTICLE)
-    time_in = models.DateTimeField(auto_now_add=True)
-    head_news = models.CharField(max_length=128)
-    text_news = models.TextField()
-    rate_news = models.SmallIntegerField(default=0)
+    change_news = models.CharField(max_length=2, choices=CATEGORY_CHOICES, default=ARTICLE, help_text=_('change news'))
+    time_in = models.DateTimeField(auto_now_add=True, help_text=_('time in'))
+    head_news = models.CharField(max_length=128, help_text=_('head news'))
+    text_news = models.TextField(help_text=_('text news'))
+    rate_news = models.SmallIntegerField(default=0, help_text=_('rate news'))
 
     def __str__(self):
         return f'{self.head_news}'
@@ -79,12 +80,12 @@ class Post(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    authUser = models.ForeignKey(User, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, help_text=_('post'))
+    authUser = models.ForeignKey(User, on_delete=models.CASCADE, help_text=_('authorization users'))
 
-    text_comment = models.TextField(default='без комментариев')
-    time_in = models.DateTimeField(auto_now_add=True)
-    rate_comment = models.SmallIntegerField(default=0)
+    text_comment = models.TextField(default='без комментариев', help_text=_('comments'))
+    time_in = models.DateTimeField(auto_now_add=True, help_text=_('time in'))
+    rate_comment = models.SmallIntegerField(default=0, help_text=_('rate comment'))
 
     def like(self):
         self.rate_comment += 1
@@ -96,8 +97,8 @@ class Comment(models.Model):
 
 
 class PostCategory(models.Model):
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, help_text=_('post'))
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, help_text=_('category'))
 
     def __str__(self):
         return f'{self.post.head_news} {self.category}'

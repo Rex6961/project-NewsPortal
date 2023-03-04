@@ -1,6 +1,7 @@
 from django import template
 from .f_mat import list_mat
 import string
+from datetime import datetime
 
 register = template.Library()
 
@@ -22,3 +23,8 @@ def url_replace(context, **kwargs):
     for k, v in kwargs.items():
         d[k]=v
     return d.urlencode()
+
+@register.simple_tag(name="get_hour")
+def current_hour():
+    now = datetime.now()
+    return now.strftime("%H")

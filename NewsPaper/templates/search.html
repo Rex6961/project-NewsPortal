@@ -1,10 +1,11 @@
 {% extends 'flatpages/default.html' %}
 
+{% load i18n %}
 {% load custom_filters %}
 
 {% block title %}
-{{search|length}} Новости
-<a href="{% url 'news' %}">На главную</a>
+{{search|length}} {% trans "Новости" %}
+<a href="{% url 'news' %}">{% trans "На главную" %}</a>
 {% endblock title %}
 
 {% block content %}
@@ -12,14 +13,14 @@
         {{ filterset.form.non_field_errors }}
 
         {{ filterset.form.change_news__icontains.errors }}
-        <label for="{{filterset.form.change_news__icontains.id_for_label}}">Новость/Статья</label>
+        <label for="{{filterset.form.change_news__icontains.id_for_label}}">{% trans "Новость/Статья" %}</label>
         <input
             id="{{filterset.form.change_news__icontains.id}}"
             name="{{filterset.form.change_news__icontains.name}}"
             value="{{filterset.form.change_news.value}}"
         />
         {{ filterset.form.head_news__icontains.errors }}
-        <label for="{{filterset.form.head_news__icontains.id_for_label}}">Название</label>
+        <label for="{{filterset.form.head_news__icontains.id_for_label}}">{% trans "Название" %}</label>
         <input
             id="{{filterset.form.head_news__icontains.id}}"
             name="{{filterset.form.head_news__icontains.name}}"
@@ -27,7 +28,7 @@
         />
 
         {{ filterset.form.time_in__gt.errors }}
-        <label for="{{filterset.form.time_in__gt.id_for_label}}">Позже даты:</label>
+        <label for="{{filterset.form.time_in__gt.id_for_label}}">{% trans "Позже даты:" %}</label>
         <input
                 type="datetime-local"
                 id="{{filterset.form.time_in__gt.id}}"
@@ -35,16 +36,16 @@
                 value="{{filterset.form.time_in__gt.value}}"
                 min="2022-12-01T00:00"
         />
-        <input type="submit" value="Найти"/>
+        <input type="submit" value="{% trans 'Найти' %}"/>
     </form>
 
 
 <table>
     <tr>
-        <td>Новость/Статья</td>
-        <td>Заголовок</td>
-        <td>Дата публикации</td>
-        <td>Кратко</td>
+        <td>{% trans "Новость/Статья" %}</td>
+        <td>{% trans "Заголовок" %}</td>
+        <td>{% trans "Дата публикации" %}</td>
+        <td>{% trans "Кратко" %}</td>
     </tr>
     {% if search %}
         {% for new in search %}
@@ -56,7 +57,7 @@
         </tr>
         {% endfor %}
     {% else %}
-        <h3>В данный момент пока еще нет статей</h3>
+        <h3>{% trans "В данный момент пока еще нет статей" %}</h3>
     {% endif %}
 </table>
 

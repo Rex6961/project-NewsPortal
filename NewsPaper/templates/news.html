@@ -1,31 +1,31 @@
 {% extends 'flatpages/default.html' %}
 
-
+{% load i18n %}
 {% load custom_filters %}
 
 
 {% block title %}
-{{news|length}} Новости
-<a style="color: red" href="{% url 'search' %}">Найти статью</a>
+{{news|length}} {% trans "Новости" %}
+<a style="color: red" href="{% url 'search' %}">{% trans "Найти статью" %}</a>
 {% endblock title %}
 
 {% block content %}
 
 {% if perms.news.add_post %}
-<a href="{% url 'articles_post_create' %}">Добавить статью</a>
+<a href="{% url 'articles_post_create' %}">{% trans "Добавить статью" %}</a>
 {% endif %}
 {% if perms.news.add_post %}
-<a href="{% url 'news_post_create' %}">Добавить новость</a>
+<a href="{% url 'news_post_create' %}">{% trans "Добавить новость" %}</a>
 {% endif %}
 
 <table>
     <tr>
-        <td>Заголовок</td>
-        <td>Дата публикации</td>
-        <td>Кратко</td>
-        <td>Категория</td>
+        <td>{% trans "Заголовок" %}</td>
+        <td>{% trans "Дата публикации" %}</td>
+        <td>{% trans "Кратко" %}</td>
+        <td>{% trans "Категория" %}</td>
         {% if perms.news.change_post %}
-        <td>Действия</td>
+        <td>{% trans "Действия" %}</td>
         {% endif %}
     </tr>
     {% if news %}
@@ -40,16 +40,16 @@
             <td>
                 {% if perms.news.change_post %}
                     {% if new.change_news == 'AR' %}
-                        <a href="articles/{{new.pk}}/update/">Изменить</a>
+                        <a href="articles/{{new.pk}}/update/">{% trans "Изменить" %}</a>
                     {% else %}
-                        <a href="news/{{new.pk}}/update/">Изменить</a>
+                        <a href="news/{{new.pk}}/update/">{% trans "Изменить" %}</a>
                     {% endif %}
                 {% endif %}
             </td>
         </tr>
         {% endfor %}
     {% else %}
-        <h3>В данный момент пока еще нет статей</h3>
+        <h3>{% trans "В данный момент пока еще нет статей" %}</h3>
     {% endif %}
 </table>
 
@@ -70,7 +70,5 @@
             <a href="?page={{page_obj.paginator.num_pages}}">{{ page_obj.paginator.num_pages }}</a>
         {% endif %}
     {% endif %}
-
-
 
 {% endblock content %}
